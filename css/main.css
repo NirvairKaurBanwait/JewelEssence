@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+
+/* Fonts 
+font-family: "Marcellus SC", serif ;  - title
+font-family: "Quicksand", sans-serif;   -body text 1
+font-family: "Hind Vadodara", sans-serif; - body text 2
+*/
+
+
+/* Colours
+#000000 - primary colour
+#FFFFFC - secondary colour
+#F1E5CB - accent colour
+*/
+
+/* Declaring variables */
+
+:root {
+    --col1: #000000;
+    --col2: #FFFFFC;
+    --col3: #F1E5CB;
+    --font1: "Marcellus SC", serif;
+    --font2: "Quicksand", sans-serif;
+    --font3: "Hind Vadodara", sans-serif;
+}
+
+/* Default styles */
+
+body {
+    background-color: var(--col2);
+    font-family: var(--font2);
+}
+
+img {
+    /* all images responsive */
+    width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: var(--col1);
+    color: var(--col3);
+    height: 9rem;
+}
+
+a {
+    /* styles all the links */
+    text-decoration: none;
+    color: var(--col1);
+}
+
+.wrapper {
+    /* this class is for a div inside header */
+    max-width: 79em;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "n t s"
+        "n t l";
+    /* grid is used to arrange the layout of header (title, nav, search bar, login icon) in 3 columns and 2 rows and areas are assigned the names */
+}
+
+#title {
+    /* styles the title of shop */
+    margin: 0;
+    font-family: var(--font1);
+    font-size: 4em;
+    text-align: center;
+    grid-area: t;
+    /* title is placed in area 't' of grid */
+}
+
+nav {
+    grid-area: n;
+    /* nav icon is placed in area n of grid */
+    align-self: center;
+    /* it is positioned in the center of cell */
+}
+
+.fa-bars{
+    margin-left: 1em;
+}
+
+.fa-magnifying-glass {
+    grid-area: s;
+    /* search bar icon placed in area s of grid */
+    justify-self: end;
+    /* positioned in the end just to make the layout nice */
+    margin-top:1rem;
+    /* to move it bit lower from top */
+    margin-right:1em;
+}
+
+.fa-user {
+    grid-area: l;
+    /* login icon icon placed in area l of grid */
+    justify-self: end;
+    /* positioned in the end just to make the layout nice */
+    margin-right:1em;
+
+}
+
+nav li {
+    width: 100%;
+    /* width of the nav list items */
+}
+
+nav li a {
+    background-color: var(--col1);
+    color: var(--col3);
+    text-decoration: none;
+    width: 100%;
+    height: 4em;
+    transition: all 1s;
+    display: flex;
+    /* flexbox used for the links text in nav list items */
+    justify-content: center;
+    align-items: center;
+    /* both of the above properties used to position the text in center vertically as well as horizontally. */
+}
+
+nav li a:hover {
+    background-color: var(--col2);
+    color: var(--col1);
+} 
+
+ul {
+    display: flex;
+    flex-direction: column;
+     /* flexbox used to adjust the nav items vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 0.1em;
+    /* provides spacing between flex items */
+    list-style: none;
+    padding: 0.1em;  
+    width: 100%;
+    /* it spans the whole width */
+    margin-top: 3.5rem;
+    position: absolute;
+    /* takes out from normal flow */
+    transform: translateY(-200%);
+    /* moves the list vertically */
+    transition: transform 2s;
+    /* transformation takes place for 2 sec smoothly */
+    z-index: 999999;
+    /* stacks the list on top of every other element */
+}
+
+.show {
+    /* linked to javascript */
+    transform: translateY(0);
+    /* vertically it remains in same place */
+}
+
+i {
+    /* styles the 3 icons used from font awesome kit */
+    font-size: 2rem;
+    padding: 0.5rem;
+    color: var(--col3);
+    position: relative;
+    z-index: 999;
+}
+
+
+.hero h2 {
+    /* styles the tagline written on hero image */
+    width: 90%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
+    padding: 1em;
+    font-size: 1.5em;
+    font-family: var(--font3);
+    text-align: center;
+}
+
+.hero {
+    /* flexbox used here to align things in center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.heading {
+    /* styles both the main headings */
+    font-size: 2.7rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.featured {
+    /* flexbox used to arrange the products and their content vertically and in center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.3rem;
+    margin-left: 2rem;
+    margin-right: 3rem;
+    padding: 2rem;
+}
+
+.featured img {
+    /* styles the images of products */
+    border: 0.7rem solid var(--col3);
+}
+
+.featured p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.button {
+    /* styles all the buttons */
+    background-color: var(--col3);
+    padding: 0.937rem 2rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.625rem;
+    border: solid 0.1rem var(--col1);
+}
+
+.featured .button {
+    margin-left: 28%;
+}
+
+
+.button:hover {
+    background-color: var(--col2);
+}
+
+.bold {
+    /* it bolds some part of text inside the span tag in collection categories text */
+    font-weight: bold;
+    text-align: center;
+}
+
+.align-p {
+    /* it aligns some part of text inside the span tag in collection categories text */
+    text-align: left;
+    font-family: var(--font3);
+}
+
+.category1 {
+    /* grid used to make cards displaying category 1 */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "i"
+        "p"
+        "b";
+    /* aligned vertically for mobile */
+    gap: 1.5rem;
+    padding: 0.4rem;
+    margin: 2rem;
+    border: solid black 0.1rem;
+}
+
+/* grid areas assigned to the child elements of category 1 */
+
+.category1 img {
+    grid-area: i;
+}
+
+.category1 p {
+    grid-area: p;
+    font-size: 1.5rem;
+}
+
+.category1 .button {
+    grid-area: b;
+    width: 7rem;
+    margin-left: 27%;
+    margin-bottom: 1.1em;
+}
+
+.category2 {
+    /* grid used to make cards displaying category 2 in vertical layout for mobile */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "i"
+        "p"
+        "b";
+    gap: 1.5rem;
+    padding: 0.4rem;
+    margin: 2rem;
+    border: solid black 0.1rem;
+}
+
+/* grid areas assigned */
+
+.category2 img {
+    grid-area: i;
+}
+
+.category2 p {
+    grid-area: p;
+    font-size: 1.5rem;
+}
+
+.category2 .button {
+    grid-area: b;
+    width: 7rem;
+    margin-left: 27%;
+    margin-bottom: 1.1em;
+}
+
+.check {
+    /* positions the check more button */
+    margin-left: 35%;
+}
+
+footer {
+    background-color: var(--col1);
+    color: var(--col3);
+    margin-top: 1rem;
+    height: 13rem;
+    padding-top: 1.3em;
+    padding-left: 2em;
+}
+
+
+.fa-phone,
+.fa-envelope {
+    /* styles phone and email icons in footers */
+    font-size: 1.2em;
+    
+}
+
+#contact {
+    /* flexbox used to arrange "contact us" heading and the contact details in a row */
+    display: flex;
+    flex-direction: row;
+    gap: 2.2em;
+}
+
+#contact p {
+    text-align: left;
+}
+
+#time {
+    /* flexbox used to arrange "visiting hours" heading and details in a row */
+    display: flex;
+    flex-direction: row;
+    gap: 1.2em;
+}
+
+
+.line-height {
+    /* to adjust line-height between list items of visiting hours */
+    line-height: 2em;
+}
+
+h3 {
+    /* styles the headings in footer */
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+footer p {
+    /* aligns copyright text in center */
+    text-align: center;
+}
+
+@media only screen and (min-width: 60em) {
+     /* for 960px screen size or larger */
+
+    .wrapper {
+        /* it changes the header layout to desktop, so grid-areas are adjusted that way and the elements change their positions accordingly */
+        grid-template-areas:
+            "l t s"
+            "n n n";
+        padding-top: 0.9rem;
+    }
+
+    header {
+        /* adjusts height according to desktop layout */
+        height: 11rem;
+    }
+
+    .fa-magnifying-glass {
+        /* position adjustments */
+        justify-self: end;
+        margin-right: 5.2rem;
+        margin-top: 0.9rem;
+    }
+
+    .fa-user {
+         /* position adjustments */
+        justify-self: start;
+        margin-left: 6.3rem;
+        margin-top: 0.9rem;
+    }
+
+    .fa-bars {
+        /* vanishes the nav icon */
+        display: none;
+    }
+
+    ul {
+        /* changes nav layout to row */
+        flex-direction: row;
+        transform: translateY(0);
+        position: static;
+        margin-top: 2rem;
+    }
+
+    .hero {
+        width: 100%;
+        height: 30rem;
+        overflow: hidden;
+    }
+
+    .hero h2 {
+        width: 80%;
+        font-size: 3rem;
+        top: 26%;
+        background-color: transparent;
+        color: var(--col1);
+    }
+
+    .featured {
+        /* product cards are displayed horizontally for desktop */
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-left: 3rem;
+        margin-right: 4rem; 
+    }
+
+    .featured img {
+        border: 0.5rem solid var(--col3);
+    }
+    
+    .featured .button {
+        margin-left: 31%;
+    }
+
+    .bold {
+        margin: 8rem;
+    }
+
+    #h-fit {
+        /* id used to adjust text in category 2 */
+        margin: 4rem;
+    }
+
+    .category1 {
+        margin-left: 5rem;
+        margin-right: 5rem;
+        padding: 0.9em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "i p"
+            "i b";
+        /* grid used to adjust the elements differently, having image on the left (as per desktop layout) */
+    }
+
+    .category1 p {
+        grid-area: p;
+        font-size: 1.5rem;
+        align-self: flex-end;
+        /* to arrange the whole content in center, paragraph is adjusted near the end of cell */
+    }
+
+    .category1 .button {
+        grid-area: b;
+        width: 6rem;
+        height: 1.3rem;
+        margin-left: 39%;
+    }
+
+    .category2 {
+        margin-left: 5rem;
+        margin-right: 5rem;
+        padding: 0.9em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "p i"
+            "b i";
+        /* grid used to adjust the elements differently, having image on the left (as per desktop layout) */
+    }
+
+    .category2 p {
+        grid-area: p;
+        font-size: 1.5rem;
+        align-self: flex-end;
+         /* to arrange the whole content in center, paragraph is adjusted near the end of cell */
+    }
+
+    .category2 .button {
+        grid-area: b;
+        width: 6rem;
+        height: 1.3rem;
+        margin-left: 39%;
+    }
+
+    .check {
+        /* "check more" button adjusted as per desktop layout */
+        margin-left: 45%;
+    }
+
+    footer {
+        height: 9em;
+        padding-left: 0;
+    }
+
+    #contact {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #time {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 5rem;
+
+    }
+
+}
