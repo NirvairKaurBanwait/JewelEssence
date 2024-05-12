@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewel Essence</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://kit.fontawesome.com/39b1b99b27.js" crossorigin="anonymous"></script>
+    <!-- link for font awesome kit -->
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+
+<body>
+    <!-- Header starts here -->
+    <header>
+
+        <div class="wrapper">
+            <h1 id="title">Jewel Essence</h1>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- search icon -->
+            <i class="fa-solid fa-user"></i>
+            <!-- login icon -->
+            <nav>
+                <i class="fa-solid fa-bars" onclick="mobileMenu()"></i>
+                <!-- navigation menu icon with an event assigned a function -->
+                <ul class="navbar">
+                    <li> <a href="#">Home </a> </li>
+                    <li> <a href="#">About </a> </li>
+                    <li> <a href="#">Collections </a> </li>
+                    <li><a href="#">Custom design</a></li>
+                    <li> <a href="#">Contact </a> </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <!-- Header ends -->
+
+
+    <main>
+
+        <!-- Section containing a hero image with tagline -->
+        <section class="hero">
+            <div> <img src="images/hero-img.jpg" alt="two rings on a creamy background with some white flowers">
+            </div>
+            <h2>Unveil your true radiance: Jewel Essence, where beauty knows no bounds.</h2>
+            <!-- chatgpt used for this tagline, prompt : "give 20 taglines for a jewellery store named "jewel essence" -->
+        </section>
+        <br>
+
+        <h2 class="heading">Featured products</h2>
+
+        <!-- Section for 3 featured products *****STARTS****-->
+        <section class="featured">
+
+            <!-- Section for Product 1: earrings -->
+            <section class="product1">
+                <img src="images/earrings.jpg" alt="beautiful diamond earrings"><br><br>
+                <!-- adobe firefly used for this image, prompt: "diamond earrings, heavy weight, elegant and shiny , on a black background" -->
+                <p>Diamond earrings</p><br>
+                <p>$9643.00</p><br><br>
+                <a class="button" href="#">Add to cart</a>
+            </section>
+
+            <!-- Section for Product 2: necklace -->
+            <section class="product2">
+                <img src="images/necklace.jpg" alt="beautiful diamond necklace"><br><br>
+                <!-- adobe firefly used for image, prompt: "simple diamond necklace paired with earrings , elegant and shiny , on a black background" (but i didn't get earrings in image generated) -->
+                <p>Diamond necklace</p><br>
+                <p>$10000.00</p><br><br>
+                <a class="button" href="#">Add to cart</a>
+            </section>
+
+            <!-- Section for product 3: ring -->
+            <section class="product2">
+                <img src="images/ring.jpg" alt="beautiful diamond ring"><br><br>
+                <!-- adobe firefly used for image, prompt: "diamond ring with single stone only, elegant and shiny , on a black background" -->
+                <p>Diamond ring</p><br>
+                <p>$6000.50</p><br><br>
+                <a class="button" href="#">Add to cart</a>
+            </section>
+
+        </section><br>
+        <!-- Section for 3 featured products *****ENDS****-->
+
+
+        <h2 class="heading">Collections </h2>
+
+        <!-- Section for  category 1 of collections  -->
+        <section class="category1">
+            <img src="images/wedding.jpg" alt="engagement rings placed in a decorative way">
+            <p><span class="bold">Explore the wedding jewellery.</span> <br><br><span class="align-p">Embark on a
+                    journey of timeless beauty and exquisite craftsmanship as you delve into the enchanting realm of
+                    wedding jewellery.</span></p>
+                    <!-- chatgpt used for this description, prompt: "what should be description for tagline : Explore the wedding jewellery." -->
+            <a class="button" href="#">View</a>
+        </section>
+        <br>
+
+          <!-- Section for  category 2 of collections -->
+        <section class="category2">
+            <img src="images/simple.jpg" alt="a girl wearing simple minimal jewellery">
+            <p><span class="bold" id="h-fit">Explore the simple and minimal jewellery.</span><br><br><span
+                    class="align-p">Dive into the essence of understated sophistication with our collection of
+                    simple and minimal jewellery. </span></p>
+                    <!-- chatgpt used for this description, prompt:"what should be description for tagline : Explore the simple and minimal jewellery." -->
+            <a class="button" href="#">View</a>
+        </section>
+        
+        <a class="button check" href="#">Check more</a> <br> <br>
+
+    </main>
+
+    <!-- footer starts -->
+    <footer>
+
+        <!-- div created to adjust the layout in desktop size -->
+        <div class="footer-desktop">
+
+            <section id="contact">
+                <h3>Contact us: </h3><br>
+                <p>
+                    <i class="fa-solid fa-phone"> </i>999-999-9999<br>
+                    <i class="fa-solid fa-envelope"></i>jewel_essence@gmail.com
+                </p>
+            </section><br><br>
+
+            <section id="time">
+                <h3>Visiting hours: </h3><br>
+                <ol>
+                    <li class="line-height">10:00-18:00 (Mon -Thu)</li>
+                    <li>10:00-14:00 (Friday)</li>
+                </ol>
+            </section><br><br>
+
+        </div>
+
+        <p> Copyright &copy; 2024 Jewel Essence. All rights reserved.</p>
+    </footer>
+
+    <!-- footer ends -->
+
+    <script src="js/script.js"></script>
+    <!-- link to javascript file -->
+
+</body>
+
+</html>
