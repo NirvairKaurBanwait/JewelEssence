@@ -236,7 +236,7 @@ i {
 
 
 .button:hover {
-    background-color: var(--col2);
+       background-color: rgb(241, 229, 203, 0.4);
 }
 
 .bold {
